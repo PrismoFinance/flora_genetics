@@ -13,11 +13,11 @@ RUN cargo build --release
 # Use a minimal image for the final stage
 FROM debian:bullseye-slim
 
-# Install dependencies
-RUN apt-get update && apt-get install -y libssl-dev ca-certificates && rm -rf /var/lib/apt/lists/*
+# Install dependencies (only ca-certificates for HTTPS)
+RUN apt-get update && apt-get install -y ca-certificates && rm -rf /var/lib/apt/lists/*
 
 # Copy the binary from the builder stage
-COPY --from=builder /app/target/release/flora-genetics-backend /usr/local/bin/flora-genetics-backend
+COPY --from=builder /app/target/release/flora_genetics /usr/local/bin/flora_genetics
 
 # Expose the port
 EXPOSE 8080

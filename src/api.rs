@@ -1,5 +1,7 @@
 use reqwest::Error;
 
+
+
 // Build the esearch API URL
 pub fn build_esearch_url(query: &str, field: &str) -> String {
     format!(
