@@ -1,0 +1,16 @@
+[package]
+name = "flora_genetics"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.43.0", features = ["full"] }
+serde_json = "1.0.139"
+reqwest = "0.12.12"
+serde = { version = "1.0.218", features = ["derive"] }
+actix-web = "4.0.1"  # Web framework
+lazy_static = "1.4.0"  # For global state management
+actix-rt = "2.0.0"   # Async runtime for Actix
+thiserror = "1.0"
+env_logger = "0.11.6"  # Use the latest version without specifying unnecessary features
+anstream = "0.6.18"

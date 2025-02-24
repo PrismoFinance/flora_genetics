@@ -1,0 +1,12 @@
+# Ignore the target directory (Rust build artifacts)
+target/
+
+# Ignore Git files
+.git/
+
+# Ignore Cargo.lock (if you want to exclude it)
+Cargo.lock
+
+# Ignore IDE-specific files
+.idea/
+.vscode/
